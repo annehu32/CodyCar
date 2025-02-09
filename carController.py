@@ -18,10 +18,11 @@ def peripheral(name):
             if(not button.value()): # Upon button press:
                 print("Button has been pressed!")
                 #message = readSensors() # TODO: Write sensor reading program
-                message = 'FLBR' # tester message while waiting for sensor code
+                message = 'FPBRP' # tester message while waiting for sensor code
                 if coms.connect_up():
                         time.sleep(0.01)
                         coms.send(message)
+            time.sleep(0.1)
             
     except Exception as e:
         print("except 1")
